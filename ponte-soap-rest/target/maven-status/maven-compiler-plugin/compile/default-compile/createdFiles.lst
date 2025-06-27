@@ -1,0 +1,17 @@
+ao\uan\ponte\soap\SmsDescentralizada.class
+ao\uan\ponte\soap\CriarPerfil.class
+ao\uan\ponte\soap\Servico.class
+ao\uan\ponte\soap\CriarPerfilResponse.class
+ao\uan\ponte\soap\Utilizador.class
+ao\uan\ponte\soap\ObjectFactory.class
+ao\uan\ponte\soap\RegistarUtilizador.class
+ao\uan\ponte\soap\Servico_Service.class
+ao\uan\ponte\soap\Restricao.class
+ao\uan\ponte\soap\package-info.class
+ao\uan\ponte\soap\Anuncio.class
+ao\uan\ponte\soap\PostarMensagemResponse.class
+ao\uan\ponte\soap\CriarRestricao.class
+ao\uan\ponte\soap\SmsDescentralizadaResponse.class
+ao\uan\ponte\soap\PostarMensagem.class
+ao\uan\ponte\soap\CriarRestricaoResponse.class
+ao\uan\ponte\soap\RegistarUtilizadorResponse.class

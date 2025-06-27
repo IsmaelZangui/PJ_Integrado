@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LocaisActivity">
+
+    <!-- Barra superior com título e botão de voltar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2264FF"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        app:title="Locais"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- Lista de Locais -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLocais"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:listitem="@layout/item_local_card" />
+
+    <!-- FAB centralizado e aumentado -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdicionarLocal"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Adicionar Local"
+        app:backgroundTint="?attr/colorPrimary"
+        app:elevation="6dp"
+        app:maxImageSize="36dp"
+        app:shapeAppearanceOverlay="@style/Widget.Material3.FloatingActionButton"
+        app:srcCompat="@drawable/ic_add_location"
+        app:tint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

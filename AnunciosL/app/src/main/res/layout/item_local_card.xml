@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Nome do Local -->
+        <TextView
+            android:id="@+id/txtNomeLocal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nome do Local"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/badgeTipoLocal"
+            app:layout_constraintHorizontal_bias="0" />
+
+        <!-- Tipo: GPS ou SSID -->
+        <TextView
+            android:id="@+id/badgeTipoLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="#2264FF"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="2dp"
+            app:layout_constraintTop_toTopOf="@id/txtNomeLocal"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Ícone e Coordenadas ou SSIDs -->
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/txtNomeLocal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemover">
+
+            <ImageView
+                android:id="@+id/iconTipo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_location"
+                app:tint="#555" />
+
+            <LinearLayout
+                android:id="@+id/layoutValores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:wrapContent="true"
+                android:layout_gravity="center_vertical" />
+            <!-- Coordenadas ou SSIDs serão inseridos via código -->
+        </LinearLayout>
+
+        <!-- Botão Remover -->
+        <ImageButton
+            android:id="@+id/btnRemover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_btn_remover"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:contentDescription="Remover"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutInfo"
+            app:tint="@android:color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

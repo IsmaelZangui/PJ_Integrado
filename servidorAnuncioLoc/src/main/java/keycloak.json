@@ -1,0 +1,14 @@
+{
+  "realm": "g10",
+  "auth-server-url": "http://localhost:8180",
+  "ssl-required": "none",
+  "resource": "java-ee-backend",
+  "public-client": false,
+  "confidential-port": 0,
+  "credentials": {
+    "secret": "nJPMrUkvKE1r5vLlLI70RYordUsSQszV"
+  },
+  "use-resource-role-mappings": true,
+  "enable-cors": true,
+  "verify-token-audience": true
+}

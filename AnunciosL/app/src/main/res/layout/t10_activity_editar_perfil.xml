@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Topbar com seta e título centralizado -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp">
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voltar"
+            android:src="@drawable/ic_back"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Editar Perfil"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <!-- Título seção -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atributos Atuais do Perfil"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Lista de pares -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAtributos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!-- Título Adicionar -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Novo Atributo"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Cartão campos -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insira a chave e o valor para o novo atributo do perfil."
+                android:textSize="13sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/edtChave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Nome do Atributo (Ex: Idioma)"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Valor do Atributo (Ex: Português)"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:textColor="#000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAdicionarAtributo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicionar Atributo"
+                android:textAllCaps="false"
+                android:layout_marginTop="12dp"
+                android:drawableLeft="@drawable/ic_add"
+                android:drawablePadding="6dp"
+                android:backgroundTint="#2264FF"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Botões Abaixo -->
+    <Button
+        android:id="@+id/btnRemoverTodos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remover Todos os Atributos"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/ic_delete"
+        android:drawablePadding="8dp"
+        android:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Alterações"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/ic_save"
+        android:drawablePadding="8dp"
+        android:backgroundTint="#2264FF"
+        android:textColor="@android:color/white" />
+</LinearLayout>

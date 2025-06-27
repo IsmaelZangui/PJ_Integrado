@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Item ativo - branco sólido -->
+    <item android:color="@color/white" android:state_checked="true"/>
+
+    <!-- Item inativo - branco com 60% de opacidade -->
+    <item android:color="@color/white_60pct" android:state_checked="false"/>
+
+    <!-- Fallback caso precise -->
+    <item android:color="@color/white_60pct"/>
+</selector>

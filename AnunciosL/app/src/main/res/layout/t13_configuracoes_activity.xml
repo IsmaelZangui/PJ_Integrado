@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:title="Configurações do Aplicativo"
+            app:titleTextColor="#000000"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            android:elevation="4dp" />
+
+        <!-- Preferências Gerais -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferências Gerais"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:background="@drawable/bg_section_header"
+            android:padding="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajuste as configurações principais do aplicativo."
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="@android:color/white" />
+
+        <!-- Localização GPS -->
+        <include layout="@layout/item_preferencia_gps" />
+
+        <!-- Wi-Fi Direct -->
+        <include layout="@layout/item_preferencia_wifi" />
+
+        <!-- Dados e Armazenamento -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dados e Armazenamento"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:background="@drawable/bg_section_header"
+            android:padding="12dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gerencie o uso de dados e armazenamento do aplicativo."
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="@android:color/white" />
+
+        <!-- Observações -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Observações Adicionais"
+                    android:textStyle="bold"
+                    android:textColor="#212121" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Preferências padrão para notificação e sincronização de dados."
+                    android:background="@android:color/transparent"
+                    android:textColorHint="#888888"
+                    android:minHeight="80dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Botões -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btn_limpar_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🗑 Limpar Cache"
+                android:backgroundTint="#F5F5F5"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btn_repor_definicoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔁 Repor Definições"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

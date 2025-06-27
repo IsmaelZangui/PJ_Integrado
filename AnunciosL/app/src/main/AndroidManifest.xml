@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissões de localização e internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AnunciosL"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+
+        <!-- Chave da API do Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBVbh5rCH4pcVxxiOp7YEoXkfl7mgI30tk" />
+
+        <!-- SplashScreen como primeira Activity -->
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- As demais Activities -->
+        <activity android:name=".MainActivity" android:exported="false"/>
+        <activity android:name=".activities.LoginActivity" android:exported="false"/>
+        <activity android:name=".activities.RegisterActivity" android:exported="false"/>
+        <activity android:name=".activities.RecuperarSenhaActivity" android:exported="false"/>
+        <activity android:name=".activities.MainHomeActivity" android:exported="false"/>
+        <activity android:name=".activities.CriarAnuncioActivity" android:exported="false"/>
+        <activity android:name=".activities.MensagensRecebidasActivity" android:exported="false"/>
+        <activity android:name=".activities.DetalhesMensagemActivity" android:exported="false"/>
+        <activity android:name=".activities.MensagensEnviadasActivity" android:exported="false"/>
+        <activity android:name=".activities.PerfilActivity" android:exported="false"/>
+        <activity android:name=".activities.EditarPerfilActivity" android:exported="false"/>
+        <activity android:name=".activities.LocaisActivity" android:exported="false"/>
+        <activity android:name=".activities.EstatisticasActivity" android:exported="false"/>
+        <activity android:name=".activities.ConfiguracoesActivity" android:exported="false"/>
+
+    </application>
+
+</manifest>

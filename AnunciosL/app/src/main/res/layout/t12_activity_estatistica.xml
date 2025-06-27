@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.EstatisticasActivity">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/white"
+            app:title="Estatísticas"
+            app:titleTextColor="@android:color/black"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:menu="@menu/menu_toolbar_notificacao"
+            android:elevation="4dp" />
+
+        <!-- Estatísticas de Resumo -->
+        <TextView
+            android:id="@+id/textResumoTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estatísticas de Resumo"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#212121"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Grid de Estatísticas -->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridResumo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="16dp"
+            app:alignmentMode="alignMargins"
+            app:columnCount="2"
+            app:useDefaultMargins="true">
+
+            <!-- Cards -->
+            <include layout="@layout/item_estatistica_card_envios" />
+            <include layout="@layout/item_estatistica_card_rececoes" />
+            <include layout="@layout/item_estatistica_card_saldo" />
+            <include layout="@layout/item_estatistica_card_locais" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <!-- Separador visual -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginHorizontal="16dp" />
+
+        <!-- Atividades Recentes -->
+        <TextView
+            android:id="@+id/textAtividadesTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atividades Recentes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#212121"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAtividades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- Título das Tarefas -->
+        <TextView
+            android:id="@+id/textTarefasTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarefas Importantes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#212121"
+            android:paddingStart="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Lista de Tarefas -->
+        <LinearLayout
+            android:id="@+id/layoutTarefas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="24dp">
+
+            <include layout="@layout/item_tarefa_importante" />
+            <include layout="@layout/item_tarefa_importante" />
+            <include layout="@layout/item_tarefa_importante" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

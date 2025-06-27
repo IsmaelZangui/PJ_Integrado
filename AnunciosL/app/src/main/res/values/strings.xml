@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AnunciosL</string>
+    <string name="email">Email</string>
+    <string name="palavra_passe">Palavra-passe</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueceu_a_palavra_passe">Esqueceu a palavra-passe?</string>
+    <string name="n_o_tem_conta_registe_se">Não tem conta? Registe-se</string>
+    <string name="lista_de_atributos">Lista de atributos do anúncio</string>
+    <string name="descricao_lista_chaves">Lista de chaves de filtragem</string>
+    <string name="descricao_chaves">Lista de pares chave do utilizador</string>
+
+
+    <string name="descricao_recycler_atributos">Lista de atributos do anúncio</string>
+    <!-- Novas strings -->
+    <string name="iniciar_sessao">Iniciar Sessão</string>
+    <string name="descricao_mensagens_recebidas">Lista de mensagens recebidas</string>
+    <string name="aceda_conta">Aceda à sua conta para continuar</string>
+    <string name="app_logo">Logotipo da aplicação</string>
+
+</resources>

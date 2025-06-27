@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema escuro da aplicação -->
+    <style name="Base.Theme.AnunciosL" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cores principais para modo escuro -->
+        <item name="colorPrimary">#2264FF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#03DAC5</item>
+        <item name="colorOnSecondary">#000000</item>
+
+        <!-- Fundo escuro -->
+        <item name="colorSurface">#121212</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+
+        <!-- Status e navegação -->
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#121212</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo com cor roxa suave -->
+    <solid android:color="#7A86FF" /> <!-- ou #6C63FF como alternativa -->
+
+    <!-- Cantos arredondados -->
+    <corners android:radius="16dp" />
+
+    <!-- Espaçamento interno se necessário (opcional) -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>

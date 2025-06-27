@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base da aplicação -->
+    <style name="Base.Theme.AnunciosL" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Cores principais -->
+        <item name="colorPrimary">#2264FF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#03DAC5</item>
+        <item name="colorOnSecondary">#000000</item>
+
+        <!-- Fundo e superfícies -->
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#000000</item>
+
+        <!-- Cores para status bar e navigation bar -->
+        <item name="android:statusBarColor">#2264FF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+
+        <!-- Tipografia (opcional) -->
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <!-- Tema principal usado no Manifest -->
+    <style name="Theme.AnunciosL" parent="Base.Theme.AnunciosL" />
+</resources>

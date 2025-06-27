@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Cor branca com 60% de opacidade -->
+    <color name="white_60pct">#99FFFFFF</color>
+    <color name="background">#F8F9FA</color>
+    <color name="colorPrimary">#3F51B5</color>
+
+</resources>

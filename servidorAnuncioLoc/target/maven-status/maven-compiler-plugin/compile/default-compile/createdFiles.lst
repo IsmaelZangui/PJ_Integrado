@@ -1,0 +1,9 @@
+dominio\Anuncio.class
+dominio\Utilizador.class
+dominio\ChaveUtilizador.class
+dominio\Restricao.class
+servicosImpl\Servico.class
+security\TokenFilter.class
+dominio\PerfilChave.class
+dominio\RestricaoChave.class
+persistencia\AcessoDados.class
