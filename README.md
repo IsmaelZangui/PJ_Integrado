@@ -1,2 +1,2 @@
 # PJ_Integrado
-uasndo para o envio do trabalho conjunto
+usado para o envio do trabalho conjunto
